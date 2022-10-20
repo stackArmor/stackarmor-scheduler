@@ -584,7 +584,6 @@ const EventTypesPage = () => {
                   {/* hide list heading when there is only one (current user) */}
                   {(data.eventTypeGroups.length !== 1 || group.teamId) && (
                     <EventTypeListHeading
-                      style={{ color: "#244d80" }}
                       profile={group.profile}
                       membershipCount={group.metadata.membershipCount}
                     />
