@@ -78,6 +78,7 @@ const UsernameTextfield = (props: ICustomUsernameProps) => {
         <Button
           type="button"
           className="mx-2"
+          style={{ backgroundColor: "#244d80", color: "white" }}
           onClick={() => setOpenDialogSaveUsername(true)}
           data-testid="update-username-btn">
           {t("update")}

@@ -139,7 +139,9 @@ export const AddActionDialog = (props: IAddActionDialog) => {
                     {t("cancel")}
                   </Button>
                 </DialogClose>
-                <Button type="submit">{t("add")}</Button>
+                <Button style={{ backgroundColor: "#244d80", color: "white" }} type="submit">
+                  {t("add")}
+                </Button>
               </DialogFooter>
             </Form>
           </div>

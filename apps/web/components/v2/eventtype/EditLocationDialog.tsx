@@ -332,7 +332,9 @@ export const EditLocationDialog = (props: ISetLocationDialog) => {
               color="secondary">
               {t("cancel")}
             </Button>
-            <Button type="submit">{t("update")}</Button>
+            <Button style={{ backgroundColor: "#244d80", color: "white" }} type="submit">
+              {t("update")}
+            </Button>
           </div>
         </Form>
       </DialogContent>

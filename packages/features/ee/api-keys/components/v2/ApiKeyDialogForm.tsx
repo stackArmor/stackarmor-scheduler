@@ -171,7 +171,10 @@ export default function ApiKeyDialogForm({
             <Button type="button" color="secondary" onClick={handleClose} tabIndex={-1}>
               {t("cancel")}
             </Button>
-            <Button type="submit" loading={form.formState.isSubmitting}>
+            <Button
+              style={{ backgroundColor: "#244d80", color: "white" }}
+              type="submit"
+              loading={form.formState.isSubmitting}>
               {apiKeyDetails ? t("save") : t("create")}
             </Button>
           </DialogFooter>

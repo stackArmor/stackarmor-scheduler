@@ -172,7 +172,10 @@ export default function Verify() {
               }}>
               {secondsLeft > 0 ? `Resend in ${secondsLeft} seconds` : "Send another mail"}
             </Button>
-            <Button color="primary" href={`${WEBAPP_URL || "https://app.cal.com"}/auth/login`}>
+            <Button
+              style={{ backgroundColor: "#244d80", color: "white" }}
+              color="primary"
+              href={`${WEBAPP_URL || "https://app.cal.com"}/auth/login`}>
               Login using another method
             </Button>
           </div>

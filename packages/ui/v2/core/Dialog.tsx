@@ -133,6 +133,7 @@ export const DialogContent = React.forwardRef<HTMLDivElement, DialogContentProps
                 </DialogClose>
                 {props.actionOnClick ? (
                   <Button
+                    style={{ backgroundColor: "#244d80", color: "white" }}
                     color="primary"
                     disabled={props.actionDisabled}
                     onClick={props.actionOnClick}
@@ -140,7 +141,12 @@ export const DialogContent = React.forwardRef<HTMLDivElement, DialogContentProps
                     {props.actionText}
                   </Button>
                 ) : (
-                  <Button color="primary" type="submit" disabled={props.actionDisabled} {...actionProps}>
+                  <Button
+                    style={{ backgroundColor: "#244d80", color: "white" }}
+                    color="primary"
+                    type="submit"
+                    disabled={props.actionDisabled}
+                    {...actionProps}>
                     {props.actionText}
                   </Button>
                 )}

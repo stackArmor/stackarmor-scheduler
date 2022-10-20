@@ -133,7 +133,10 @@ export default function ExchangeSetup() {
                     <Button type="button" color="secondary" onClick={() => router.back()}>
                       {t("cancel")}
                     </Button>
-                    <Button type="submit" loading={form.formState.isSubmitting}>
+                    <Button
+                      style={{ backgroundColor: "#244d80", color: "white" }}
+                      type="submit"
+                      loading={form.formState.isSubmitting}>
                       {t("save")}
                     </Button>
                   </div>

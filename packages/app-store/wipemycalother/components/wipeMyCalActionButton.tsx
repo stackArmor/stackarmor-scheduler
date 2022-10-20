@@ -30,7 +30,11 @@ const WipeMyCalActionButton = (props: IWipeMyCalActionButtonProps) => {
       {data && isSuccess && !isLoading && credentialId && (
         <div className="mb-4">
           <ConfirmDialog isOpenDialog={openDialog} setIsOpenDialog={setOpenDialog} />
-          <Button color="primary" onClick={() => setOpenDialog(true)} data-testid="wipe-today-button">
+          <Button
+            style={{ backgroundColor: "#244d80", color: "white" }}
+            color="primary"
+            onClick={() => setOpenDialog(true)}
+            data-testid="wipe-today-button">
             Wipe Today
           </Button>
         </div>

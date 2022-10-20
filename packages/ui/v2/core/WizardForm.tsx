@@ -48,6 +48,7 @@ function WizardForm<T extends DefaultStep>(props: { href: string; steps: T[]; co
             )}
 
             <Button
+              style={{ backgroundColor: "#244d80", color: "white" }}
               tabIndex={0}
               loading={currentStep.isLoading}
               type="submit"

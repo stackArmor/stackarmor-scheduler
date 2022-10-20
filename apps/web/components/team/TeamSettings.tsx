@@ -200,7 +200,7 @@ export default function TeamSettings(props: Props) {
             </div>
           </div>
           <div className="flex justify-end py-4">
-            <Button type="submit" color="primary">
+            <Button style={{ backgroundColor: "#244d80", color: "white" }} type="submit" color="primary">
               {t("save")}
             </Button>
           </div>

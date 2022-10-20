@@ -200,7 +200,12 @@ const ProfileView = () => {
                 )}
               />
               <p className="mt-2 text-sm text-gray-600">{t("team_description")}</p>
-              <Button color="primary" className="mt-8" type="submit" loading={mutation.isLoading}>
+              <Button
+                style={{ backgroundColor: "#244d80", color: "white" }}
+                color="primary"
+                className="mt-8"
+                type="submit"
+                loading={mutation.isLoading}>
                 {t("update")}
               </Button>
             </Form>

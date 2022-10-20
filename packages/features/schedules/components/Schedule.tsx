@@ -387,7 +387,7 @@ const CopyTimes = ({
         <Button color="minimalSecondary" onClick={() => onCancel()}>
           {t("cancel")}
         </Button>
-        <Button color="primary" onClick={() => onClick(selected)}>
+        <Button style={{ backgroundColor: "#244d80", color: "white" }} onClick={() => onClick(selected)}>
           {t("apply")}
         </Button>
       </div>

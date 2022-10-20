@@ -227,7 +227,11 @@ export default function MemberListItem(props: Props) {
                 {t("impersonate_user_tip")}
               </p>
               <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
-                <Button type="submit" color="primary" className="ltr:ml-2 rtl:mr-2">
+                <Button
+                  style={{ backgroundColor: "#244d80", color: "white" }}
+                  type="submit"
+                  color="primary"
+                  className="ltr:ml-2 rtl:mr-2">
                   {t("impersonate")}
                 </Button>
                 <Button type="button" color="secondary" onClick={() => setShowImpersonateModal(false)}>

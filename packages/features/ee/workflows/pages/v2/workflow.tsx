@@ -189,7 +189,9 @@ function WorkflowPage() {
         title={workflow && workflow.name ? workflow.name : "Untitled"}
         CTA={
           <div>
-            <Button type="submit">{t("save")}</Button>
+            <Button style={{ backgroundColor: "#244d80", color: "white" }} type="submit">
+              {t("save")}
+            </Button>
           </div>
         }
         heading={

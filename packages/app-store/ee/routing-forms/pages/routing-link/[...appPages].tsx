@@ -177,7 +177,7 @@ function RoutingForm({ form, profile, ...restProps }: inferSSRProps<typeof getSe
                     })}
                     <div className="mt-4 flex justify-end space-x-2 rtl:space-x-reverse">
                       <Button
-                        className="dark:bg-darkmodebrand dark:text-darkmodebrandcontrast dark:hover:border-darkmodebrandcontrast dark:border-transparent"
+                        style={{ backgroundColor: "#244d80", color: "white" }}
                         loading={responseMutation.isLoading}
                         type="submit"
                         color="primary">

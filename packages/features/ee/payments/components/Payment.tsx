@@ -110,6 +110,7 @@ export default function PaymentComponent(props: Props) {
       <CardElement id="card-element" options={CARD_OPTIONS} onChange={handleChange} />
       <div className="mt-2 flex justify-center">
         <Button
+          style={{ backgroundColor: "#244d80", color: "white" }}
           type="submit"
           disabled={["processing", "error"].includes(state.status)}
           loading={state.status === "processing"}

@@ -145,6 +145,7 @@ export default function Page({ resetPasswordRequest, csrfToken }: Props) {
 
             <div>
               <Button
+                style={{ backgroundColor: "#244d80", color: "white" }}
                 loading={loading}
                 color="primary"
                 type="submit"

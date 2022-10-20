@@ -43,7 +43,7 @@ export default class Office365CalendarService implements Calendar {
   private log: typeof logger;
   private accessToken: string | null = null;
   auth: { getToken: () => Promise<string> };
-  private apiGraphUrl = "https://graph.microsoft.com/v1.0";
+  private apiGraphUrl = "https://graph.microsoft.us/v1.0";
 
   constructor(credential: CredentialPayload) {
     this.integrationName = "office365_calendar";
@@ -181,7 +181,7 @@ export default class Office365CalendarService implements Calendar {
 
     const refreshAccessToken = async (refreshToken: string) => {
       const { client_id, client_secret } = await getOfficeAppKeys();
-      const response = await fetch("https://login.microsoftonline.com/common/oauth2/v2.0/token", {
+      const response = await fetch("https://login.microsoftonline.us/common/oauth2/v2.0/token", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({

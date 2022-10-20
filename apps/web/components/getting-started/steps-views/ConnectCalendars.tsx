@@ -98,7 +98,7 @@ const ConnectedCalendars = (props: IConnectCalendarsProps) => {
         )}
         onClick={() => nextStep()}
         disabled={disabledNextButton}>
-        {firstCalendar ? `${t("continue")}` : `${t("next_step_text")}`}
+        {firstCalendar ? `${t("sf")}` : `${t("next_step_text")}`}
         <ArrowRightIcon className="ml-2 h-4 w-4 self-center" aria-hidden="true" />
       </button>
     </>

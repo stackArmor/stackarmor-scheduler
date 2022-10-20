@@ -85,22 +85,33 @@ export default function Availability({ schedule }: { schedule: number }) {
   });
 
   return (
-    <Shell
-      backPath="/availability"
-      title={data?.schedule.name && data.schedule.name + " | " + t("availability")}
-      heading={
-        <Controller
-          control={form.control}
-          name="name"
-          render={({ field }) => <EditableHeading isReady={!isLoading} {...field} />}
-        />
-      }
-      subtitle={
-        data ? (
-          data.schedule.availability.map((availability) => (
-            <span key={availability.id}>
-              {availabilityAsString(availability, { locale: i18n.language, hour12: timeFormat === 12 })}
-              <br />
+    <Form
+      form={form}
+      handleSubmit={async (values) => {
+        updateMutation.mutate({
+          scheduleId: parseInt(router.query.schedule as string, 10),
+          name: props.schedule.name,
+          ...values,
+        });
+      }}
+      className="grid grid-cols-3 gap-2">
+      <div className="col-span-3 space-y-2 lg:col-span-2">
+        <div className="divide-y rounded-sm border border-gray-200 bg-white px-4 py-5 sm:p-6">
+          <h3 className="mb-5 text-base font-medium leading-6 text-gray-900">{t("change_start_end")}</h3>
+          <Schedule name="schedule" />
+        </div>
+        <div className="space-x-2 text-right">
+          <Button color="secondary" href="/availability" tabIndex={-1}>
+            {t("cancel")}
+          </Button>
+          <Button style={{ backgroundColor: "#244d80", color: "white" }}>{t("save")}</Button>
+        </div>
+      </div>
+      <div className="min-w-40 col-span-3 ml-2 space-y-2 lg:col-span-1">
+        {props.isDefault ? (
+          <div className="inline-block cursor-default rounded border border-gray-300 bg-gray-200 px-2 py-0.5 pl-1.5 text-sm font-medium text-neutral-800">
+            <span className="flex items-center">
+              <BadgeCheckIcon className="mr-1 h-4 w-4" /> {t("default")}
             </span>
           ))
         ) : (

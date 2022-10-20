@@ -175,6 +175,7 @@ const EnableTwoFactorModal = ({ onEnable, onCancel, open, onOpenChange }: Enable
           <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
             <WithStep step={SetupStep.ConfirmPassword} current={step}>
               <Button
+                style={{ backgroundColor: "#244d80", color: "white" }}
                 type="submit"
                 className="ltr:ml-2 rtl:mr-2"
                 onClick={handleSetup}
@@ -184,6 +185,7 @@ const EnableTwoFactorModal = ({ onEnable, onCancel, open, onOpenChange }: Enable
             </WithStep>
             <WithStep step={SetupStep.DisplayQrCode} current={step}>
               <Button
+                style={{ backgroundColor: "#244d80", color: "white" }}
                 type="submit"
                 className="ltr:ml-2 rtl:mr-2"
                 onClick={() => setStep(SetupStep.EnterTotpCode)}>
@@ -191,7 +193,10 @@ const EnableTwoFactorModal = ({ onEnable, onCancel, open, onOpenChange }: Enable
               </Button>
             </WithStep>
             <WithStep step={SetupStep.EnterTotpCode} current={step}>
-              <Button type="submit" className="ltr:ml-2 rtl:mr-2" disabled={isSubmitting}>
+              <Button
+                style={{ backgroundColor: "#244d80", color: "white" }}
+                className="ltr:ml-2 rtl:mr-2"
+                disabled={isSubmitting}>
                 {t("enable")}
               </Button>
             </WithStep>

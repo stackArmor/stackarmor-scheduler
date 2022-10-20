@@ -85,7 +85,11 @@ const DisableTwoFactorAuthModal = ({ onDisable, onCancel }: DisableTwoFactorAuth
           </div>
 
           <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
-            <Button type="submit" className="ltr:ml-2 rtl:mr-2" disabled={isDisabling}>
+            <Button
+              style={{ backgroundColor: "#244d80", color: "white" }}
+              type="submit"
+              className="ltr:ml-2 rtl:mr-2"
+              disabled={isDisabling}>
               {t("disable")}
             </Button>
             <Button color="secondary" onClick={onCancel}>

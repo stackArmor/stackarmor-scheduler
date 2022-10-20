@@ -27,6 +27,7 @@ const TwoFactorAuthView = () => {
       <Meta title="Two-Factor Authentication" description="Manage settings for your account passwords" />
       <div className="mt-6 flex items-start space-x-4">
         <Switch
+          // style={{ backgroundColor: "#244d80", borderRadius: 17 }}
           checked={user?.twoFactorEnabled}
           onCheckedChange={() =>
             user?.twoFactorEnabled ? setDisableModalOpen(true) : setEnableModalOpen(true)

@@ -109,6 +109,7 @@ const UserSettings = (props: IUserSettingsProps) => {
         </div>
       </div>
       <Button
+        style={{ backgroundColor: "#244d80", color: "white" }}
         type="submit"
         className="mt-8 flex w-full flex-row justify-center"
         disabled={mutation.isLoading}>

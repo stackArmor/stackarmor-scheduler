@@ -263,7 +263,10 @@ const WebhookForm = (props: {
           <Button type="button" color="minimal" href={`${WEBAPP_URL}/settings/developer/webhooks`}>
             {t("cancel")}
           </Button>
-          <Button type="submit" loading={formMethods.formState.isSubmitting}>
+          <Button
+            style={{ backgroundColor: "#244d80", color: "white" }}
+            type="submit"
+            loading={formMethods.formState.isSubmitting}>
             {props?.webhook?.id ? t("save") : t("create")}
           </Button>
         </div>

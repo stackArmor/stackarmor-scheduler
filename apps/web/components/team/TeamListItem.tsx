@@ -101,7 +101,12 @@ export default function TeamListItem(props: Props) {
                 <Button type="button" color="secondary" onClick={declineInvite}>
                   {t("reject")}
                 </Button>
-                <Button type="button" color="primary" className="ltr:ml-2 rtl:mr-2" onClick={acceptInvite}>
+                <Button
+                  style={{ backgroundColor: "#244d80", color: "white" }}
+                  type="button"
+                  color="primary"
+                  className="ltr:ml-2 rtl:mr-2"
+                  onClick={acceptInvite}>
                   {t("accept")}
                 </Button>
               </div>

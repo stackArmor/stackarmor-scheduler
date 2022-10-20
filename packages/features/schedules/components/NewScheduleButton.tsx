@@ -52,7 +52,10 @@ export function NewScheduleButton({ name = "new-schedule" }: { name?: string }) 
   return (
     <Dialog name={name} clearQueryParamsOnClose={["copy-schedule-id"]}>
       <DialogTrigger asChild>
-        <Button data-testid={name} StartIcon={Icon.FiPlus}>
+        <Button
+          style={{ backgroundColor: "#244d80", color: "white" }}
+          data-testid={name}
+          StartIcon={Icon.FiPlus}>
           {t("new")}
         </Button>
       </DialogTrigger>
@@ -83,7 +86,10 @@ export function NewScheduleButton({ name = "new-schedule" }: { name?: string }) 
             </div>
           </div>
           <div className="mt-8 flex flex-row-reverse gap-x-2">
-            <Button type="submit" loading={createMutation.isLoading}>
+            <Button
+              type="submit"
+              style={{ backgroundColor: "#244d80", color: "white" }}
+              loading={createMutation.isLoading}>
               {t("continue")}
             </Button>
             <DialogClose asChild>

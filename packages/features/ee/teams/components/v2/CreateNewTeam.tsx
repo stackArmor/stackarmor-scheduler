@@ -100,7 +100,12 @@ const CreateANewTeamForm = (props: { nextStep: () => void; setTeamId: (teamId: n
         <Button color="secondary" href="/settings" className="w-full justify-center">
           {t("cancel")}
         </Button>
-        <Button color="primary" type="submit" EndIcon={Icon.FiArrowRight} className="w-full justify-center">
+        <Button
+          color="primary"
+          style={{ backgroundColor: "#244d80", color: "white" }}
+          type="submit"
+          EndIcon={Icon.FiArrowRight}
+          className="w-full justify-center">
           {t("continue")}
         </Button>
       </div>

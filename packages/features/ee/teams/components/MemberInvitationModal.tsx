@@ -125,6 +125,7 @@ export default function MemberInvitationModal(props: MemberInvitationModalProps)
               {t("cancel")}
             </Button>
             <Button
+              style={{ backgroundColor: "#244d80", color: "white" }}
               type="submit"
               color="primary"
               className="ltr:ml-2 rtl:mr-2"

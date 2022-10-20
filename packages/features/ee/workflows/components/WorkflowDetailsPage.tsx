@@ -177,7 +177,10 @@ export default function WorkflowDetailsPage(props: Props) {
             </Button>
           </div>
           <div className="rtl:space-x-reverse; mt-10 flex justify-end space-x-2">
-            <Button type="submit" disabled={updateMutation.isLoading || editCounter > 0}>
+            <Button
+              style={{ backgroundColor: "#244d80", color: "white" }}
+              type="submit"
+              disabled={updateMutation.isLoading || editCounter > 0}>
               {t("save")}
             </Button>
           </div>

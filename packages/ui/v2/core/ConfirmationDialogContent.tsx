@@ -62,7 +62,10 @@ export default function ConfirmationDialogContent(props: PropsWithChildren<Confi
       <div className="mt-5 flex flex-row-reverse gap-x-2 sm:mt-8">
         <DialogClose disabled={isLoading} onClick={onConfirm} asChild>
           {confirmBtn || (
-            <Button color="primary" loading={isLoading}>
+            <Button
+              style={{ backgroundColor: "#244d80", color: "white" }}
+              color="primary"
+              loading={isLoading}>
               {isLoading ? loadingText : confirmBtnText}
             </Button>
           )}

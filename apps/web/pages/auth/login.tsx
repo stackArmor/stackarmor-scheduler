@@ -123,32 +123,38 @@ export default function Login({
             <div>
               <input defaultValue={csrfToken || undefined} type="hidden" hidden {...register("csrfToken")} />
             </div>
-            <div className="space-y-6">
-              <div className={classNames("space-y-6", { hidden: twoFactorRequired })}>
-                <EmailField
-                  id="email"
-                  label={t("email_address")}
-                  defaultValue={router.query.email as string}
-                  placeholder="john.doe@example.com"
-                  required
-                  {...register("email")}
-                />
-                <div className="relative">
-                  <div className="absolute right-0 -top-[6px] z-10">
-                    <Link href="/auth/forgot-password">
-                      <a tabIndex={-1} className="text-sm font-medium text-gray-600">
-                        {t("forgot")}
-                      </a>
-                    </Link>
-                  </div>
-                  <PasswordField
-                    id="password"
-                    autoComplete="current-password"
-                    required
-                    className="mb-0"
-                    {...register("password")}
-                  />
-                </div>
+          </div>
+
+          {twoFactorRequired && <TwoFactor center />}
+
+          {errorMessage && <Alert severity="error" title={errorMessage} />}
+          <div className="flex space-y-2">
+            <Button
+              style={{ backgroundColor: "#244d80", color: "white" }}
+              className="flex w-full justify-center"
+              type="submit"
+              disabled={isSubmitting}>
+              {twoFactorRequired ? t("submit") : t("sign_in")}
+            </Button>
+          </div>
+        </Form>
+
+        {!twoFactorRequired && (
+          <>
+            {isGoogleLoginEnabled && (
+              <div className="mt-5">
+                <Button
+                  color="secondary"
+                  className="flex w-full justify-center"
+                  data-testid="google"
+                  onClick={async (e) => {
+                    e.preventDefault();
+                    // track Google logins. Without personal data/payload
+                    telemetry.event(telemetryEventTypes.googleLogin, collectPageParameters());
+                    await signIn("google");
+                  }}>
+                  {t("signin_with_google")}
+                </Button>
               </div>
 
               {twoFactorRequired && <TwoFactor center />}

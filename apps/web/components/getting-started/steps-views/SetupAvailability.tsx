@@ -74,6 +74,7 @@ const SetupAvailability = (props: ISetupAvailabilityProps) => {
 
       <div>
         <Button
+          style={{ backgroundColor: "#244d80", color: "white" }}
           data-testid="save-availability"
           type="submit"
           className="mt-2 w-full justify-center p-2 text-sm sm:mt-8"

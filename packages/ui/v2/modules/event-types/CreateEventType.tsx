@@ -137,6 +137,7 @@ export default function CreateEventTypeButton(props: CreateEventTypeBtnProps) {
           onClick={() => openModal(props.options[0])}
           data-testid="new-event-type"
           StartIcon={Icon.FiPlus}
+          style={{ backgroundColor: "#244d80", color: "white" }}
           disabled={!props.canAddEvents}>
           {t("new")}
         </Button>
@@ -144,6 +145,7 @@ export default function CreateEventTypeButton(props: CreateEventTypeBtnProps) {
         <Dropdown>
           <DropdownMenuTrigger asChild>
             <Button
+              style={{ backgroundColor: "#244d80", color: "white" }}
               EndIcon={Icon.FiChevronDown}
               className="radix-state-open:bg-brand-500 radix-state-open:ring-2 radix-state-open:ring-brand-500 ring-offset-2">
               {t("new")}
@@ -282,7 +284,11 @@ export default function CreateEventTypeButton(props: CreateEventTypeBtnProps) {
             )}
           </div>
           <div className="mt-8 flex flex-row-reverse gap-x-2">
-            <Button type="submit" loading={createMutation.isLoading}>
+            <Button
+              type="submit"
+              color="primary"
+              loading={createMutation.isLoading}
+              style={{ backgroundColor: "#244d80", color: "white" }}>
               {t("continue")}
             </Button>
             <DialogClose asChild>

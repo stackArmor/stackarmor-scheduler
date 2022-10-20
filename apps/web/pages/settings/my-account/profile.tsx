@@ -252,7 +252,12 @@ const ProfileView = () => {
           <TextField label={t("about")} hint={t("bio_hint")} {...formMethods.register("bio")} />
         </div>
 
-        <Button color="primary" className="mt-8" type="submit" loading={mutation.isLoading}>
+        <Button
+          style={{ backgroundColor: "#244d80", color: "white" }}
+          color="primary"
+          className="mt-8"
+          type="submit"
+          loading={mutation.isLoading}>
           {t("update")}
         </Button>
 

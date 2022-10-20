@@ -99,6 +99,7 @@ const MembersView = () => {
             {isAdmin && (
               <div className="relative mb-5 flex w-full items-center ">
                 <Button
+                  style={{ backgroundColor: "#244d80", color: "white" }}
                   type="button"
                   color="primary"
                   StartIcon={Icon.FiPlus}

@@ -41,7 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     client_secret,
   });
 
-  const response = await fetch("https://login.microsoftonline.com/common/oauth2/v2.0/token", {
+  const response = await fetch("https://login.microsoftonline.us/common/oauth2/v2.0/token", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
@@ -55,7 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.redirect("/apps/installed?error=" + JSON.stringify(responseBody));
   }
 
-  const whoami = await fetch("https://graph.microsoft.com/v1.0/me", {
+  const whoami = await fetch("https://graph.microsoft.us/v1.0/me", {
     headers: { Authorization: "Bearer " + responseBody.access_token },
   });
   const graphUser = await whoami.json();

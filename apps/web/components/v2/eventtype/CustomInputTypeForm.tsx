@@ -111,7 +111,9 @@ const CustomInputTypeForm: FC<Props> = (props) => {
         <Button onClick={onCancel} type="button" color="secondary" className="ltr:mr-2">
           {t("cancel")}
         </Button>
-        <Button type="submit">{t("save")}</Button>
+        <Button style={{ backgroundColor: "#244d80", color: "white" }} type="submit">
+          {t("save")}
+        </Button>
       </div>
     </form>
   );

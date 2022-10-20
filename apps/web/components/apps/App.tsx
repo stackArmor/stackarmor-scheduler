@@ -126,6 +126,7 @@ const Component = ({
                     }
                     return (
                       <Button
+                        style={{ backgroundColor: "#244d80", color: "white" }}
                         StartIcon={Icon.FiPlus}
                         {...props}
                         // @TODO: Overriding color and size prevent us from
@@ -163,6 +164,7 @@ const Component = ({
                 }
                 return (
                   <Button
+                    style={{ backgroundColor: "#244d80", color: "white" }}
                     data-testid="install-app-button"
                     {...props}
                     // @TODO: Overriding color and size prevent us from

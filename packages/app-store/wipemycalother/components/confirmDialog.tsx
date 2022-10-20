@@ -103,6 +103,7 @@ export const ConfirmDialog = (props: IConfirmDialogWipe) => {
           </Button>
 
           <Button
+            style={{ backgroundColor: "#244d80", color: "white" }}
             color="primary"
             data-testid="send_request"
             disabled={isLoading}

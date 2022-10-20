@@ -1068,6 +1068,7 @@ const EmbedTypeCodeAndPreviewDialogContent = ({
                 <div className="mt-8 flex flex-row-reverse gap-x-2">
                   {tab.type === "code" ? (
                     <Button
+                      style={{ backgroundColor: "#244d80", color: "white" }}
                       type="submit"
                       onClick={() => {
                         const currentTabCodeEl = refOfEmbedCodesRefs.current[tab.name].current;

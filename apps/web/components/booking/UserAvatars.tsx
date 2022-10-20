@@ -17,7 +17,13 @@ export const UserAvatars = ({
       border="border-2 dark:border-darkgray-100 border-white"
       items={
         [
-          { image: profile.image, alt: profile.name, title: profile.name },
+          {
+            image:
+              "https://media-exp1.licdn.com/dms/image/C4D0BAQE-Gstn0TXAiA/company-logo_200_200/0/1593715496845?e=2147483647&v=beta&t=DFz7onhe-omSuH1GmpkNkV0RP4LN2WID63750KOxBYY",
+            alt: profile.name,
+            title: profile.name,
+          },
+          // { image: profile.image, alt: profile.name, title: profile.name },
           ...(showMembers
             ? users.map((user) => ({
                 title: user.name,

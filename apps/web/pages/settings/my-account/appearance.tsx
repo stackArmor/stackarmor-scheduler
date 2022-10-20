@@ -165,7 +165,11 @@ const AppearanceView = () => {
             </>
           )}
         />
-        <Button type="submit" color="primary" className="mt-8">
+        <Button
+          style={{ backgroundColor: "#244d80", color: "white" }}
+          type="submit"
+          color="primary"
+          className="mt-8">
           {t("update")}
         </Button>
       </Form>

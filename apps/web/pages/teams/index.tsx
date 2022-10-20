@@ -31,7 +31,10 @@ function Teams() {
       heading={t("teams")}
       subtitle={t("create_manage_teams_collaborative")}
       CTA={
-        <Button type="button" onClick={() => setShowCreateTeamModal(true)}>
+        <Button
+          style={{ backgroundColor: "#244d80", color: "white" }}
+          type="button"
+          onClick={() => setShowCreateTeamModal(true)}>
           <Icon.FiPlus className="inline-block h-3.5 w-3.5 text-white group-hover:text-black ltr:mr-2 rtl:ml-2" />
           {t("new")}
         </Button>
@@ -54,7 +57,10 @@ function Teams() {
             headline={t("no_teams")}
             description={t("no_teams_description")}
             buttonRaw={
-              <Button color="secondary" onClick={() => setShowCreateTeamModal(true)}>
+              <Button
+                color="secondary"
+                style={{ backgroundColor: "#244d80", color: "white" }}
+                onClick={() => setShowCreateTeamModal(true)}>
                 {t("create_team")}
               </Button>
             }

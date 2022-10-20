@@ -31,7 +31,9 @@ function AdminView() {
             hint={t("impersonate_user_tip")}
             defaultValue={undefined}
           />
-          <Button type="submit">{t("impersonate")}</Button>
+          <Button style={{ backgroundColor: "#244d80", color: "white" }} type="submit">
+            {t("impersonate")}
+          </Button>
         </div>
       </form>
     </>

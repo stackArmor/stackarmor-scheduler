@@ -146,6 +146,7 @@ const PremiumTextfield = (props: ICustomUsernameProps) => {
       return (
         <div className="flex flex-row">
           <Button
+            style={{ backgroundColor: "#244d80", color: "white" }}
             type="button"
             color="primary"
             className="mx-2"
@@ -160,6 +161,7 @@ const PremiumTextfield = (props: ICustomUsernameProps) => {
       return (
         <div className="flex flex-row">
           <Button
+            style={{ backgroundColor: "#244d80", color: "white" }}
             type="button"
             color="primary"
             className="mx-2"

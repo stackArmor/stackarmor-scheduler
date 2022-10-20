@@ -82,6 +82,7 @@ const PasswordView = () => {
           </p>
           {/* TODO: Why is this Form not submitting? Hacky fix but works */}
           <Button
+            style={{ backgroundColor: "#244d80", color: "white" }}
             color="primary"
             className="mt-8"
             type="submit"

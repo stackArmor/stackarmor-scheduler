@@ -24,7 +24,13 @@ export default function AuthContainer(props: React.PropsWithChildren<Props>) {
         <img className="mb-auto h-4" src={LOGO} alt="Cal.com Logo" />
       )}
       <div className={classNames(props.showLogo ? "text-center" : "", "sm:mx-auto sm:w-full sm:max-w-md")}>
-        {props.heading && <h2 className="font-cal text-center text-3xl text-neutral-900">{props.heading}</h2>}
+        {props.showLogo && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img className="mx-auto h-6" style={{ width: 5, height: 6 }} src={LOGO} alt="Cal.com Logo" />
+        )}
+        {props.heading && (
+          <h2 className="font-cal mt-6 text-center text-3xl text-neutral-900">{props.heading}</h2>
+        )}
       </div>
       {props.loading && (
         <div className="absolute z-50 flex h-screen w-full items-center bg-gray-50">

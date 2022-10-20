@@ -139,7 +139,12 @@ export const SearchDialog = (props: ISearchDialog) => {
               }}
             />
           </div>
-          <Button type="submit" tabIndex={-1} color="secondary" loading={isLoading}>
+          <Button
+            style={{ backgroundColor: "#244d80", color: "white" }}
+            type="submit"
+            tabIndex={-1}
+            color="secondary"
+            loading={isLoading}>
             {t("search")}
           </Button>
         </form>

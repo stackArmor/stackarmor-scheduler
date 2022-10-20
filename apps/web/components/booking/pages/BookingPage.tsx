@@ -881,6 +881,7 @@ const BookingPage = ({
                     {t("cancel")}
                   </Button>
                   <Button
+                    style={{ backgroundColor: "#244d80", color: "white" }}
                     type="submit"
                     className="dark:bg-darkmodebrand dark:text-darkmodebrandcontrast dark:hover:border-darkmodebrandcontrast mr-auto dark:border-transparent"
                     data-testid={rescheduleUid ? "confirm-reschedule-button" : "confirm-book-button"}

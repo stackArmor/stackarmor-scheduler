@@ -32,6 +32,7 @@ const NewWebhookButton = () => {
   const { t, isLocaleReady } = useLocale();
   return (
     <Button
+      style={{ backgroundColor: "#244d80", color: "white" }}
       color="secondary"
       data-testid="new_webhook"
       StartIcon={Icon.FiPlus}

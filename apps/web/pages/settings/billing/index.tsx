@@ -50,7 +50,10 @@ const BillingView = () => {
         {!isPro && (
           <CtaRow title={t("billing_freeplan_title")} description={t("billing_freeplan_description")}>
             <form target="_blank" method="POST" action="/api/upgrade">
-              <Button type="submit" EndIcon={Icon.FiExternalLink}>
+              <Button
+                style={{ backgroundColor: "#244d80", color: "white" }}
+                type="submit"
+                EndIcon={Icon.FiExternalLink}>
                 {t("billing_freeplan_cta")}
               </Button>
             </form>
@@ -62,6 +65,7 @@ const BillingView = () => {
           title={t("billing_manage_details_title")}
           description={t("billing_manage_details_description")}>
           <Button
+            style={{ backgroundColor: "#244d80", color: "white" }}
             color={isPro ? "primary" : "secondary"}
             href="/api/integrations/stripepayment/portal"
             target="_blank"

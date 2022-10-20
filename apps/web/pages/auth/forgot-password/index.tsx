@@ -116,6 +116,7 @@ export default function ForgotPassword({ csrfToken }: { csrfToken: string }) {
             />
             <div className="space-y-2">
               <Button
+                style={{ backgroundColor: "#244d80", color: "white" }}
                 className="w-full justify-center"
                 type="submit"
                 disabled={loading}

@@ -115,7 +115,11 @@ function NewFormDialog({ appUrl }: { appUrl: string }) {
             </div>
           </div>
           <div className="mt-8 flex flex-row-reverse gap-x-2">
-            <Button loading={mutation.isLoading} data-testid="add-form" type="submit">
+            <Button
+              loading={mutation.isLoading}
+              style={{ backgroundColor: "#244d80", color: "white" }}
+              data-testid="add-form"
+              type="submit">
               {t("continue")}
             </Button>
             <DialogClose asChild>

@@ -287,6 +287,7 @@ function EventTypeSingleLayout({
           </Dropdown>
           <div className="border-l-2 border-gray-300" />
           <Button
+            style={{ backgroundColor: "#244d80", color: "white" }}
             className="ml-4 lg:ml-0"
             type="submit"
             loading={formMethods.formState.isSubmitting || isUpdateMutationLoading}

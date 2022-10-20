@@ -336,6 +336,7 @@ export default function WorkflowStepContainer(props: WorkflowStepProps) {
                       </Button>
                     ) : (
                       <Button
+                        style={{ backgroundColor: "#244d80", color: "white" }}
                         type="button"
                         color="primary"
                         className="-ml-3"
@@ -514,6 +515,7 @@ export default function WorkflowStepContainer(props: WorkflowStepProps) {
                     </Button>
                   ) : (
                     <Button
+                      style={{ backgroundColor: "#244d80", color: "white" }}
                       type="button"
                       color="primary"
                       onClick={async () => {

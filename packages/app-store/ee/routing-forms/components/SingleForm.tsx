@@ -169,7 +169,12 @@ const Actions = ({
         </FormActionsDropdown>
       </div>
       <VerticalDivider />
-      <Button data-testid="update-form" loading={mutation.isLoading} type="submit" color="primary">
+      <Button
+        style={{ backgroundColor: "#244d80", color: "white" }}
+        data-testid="update-form"
+        loading={mutation.isLoading}
+        type="submit"
+        color="primary">
         {t("save")}
       </Button>
     </div>
