@@ -79,7 +79,7 @@ export const HeadSeo = (props: HeadSeoProps): JSX.Element => {
   const image = getSeoImage("ogImage") + constructGenericImage({ title, description });
   const truncatedDescription = truncateOnWord(description, 158);
 
-  const pageTitle = title + " | Cal.com";
+  const pageTitle = title + " | meetme.stackarmor.com";
   let seoObject = buildSeoMeta({
     title: pageTitle,
     image,
