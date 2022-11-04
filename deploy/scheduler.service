@@ -1,0 +1,31 @@
+# Systemd service unit file for OpsAlert API Service
+# This file should be placed in /etc/systemd/system/opsalert.service
+# To enable run following command:
+# systemctl enable opsalert
+
+[Unit]
+Description=StackArmor Scheduler Service
+After=network.target
+
+[Service]
+Type=idle
+
+# Following should be user and group used for running cron jobs
+User=scheduler
+Group=scheduler
+
+#Environment variables
+Environment=NVM_DIR=/home/scheduler/.nvm
+Environment=PATH=/home/scheduler/.nvm/versions/node/v16.17.0/bin:/sbin:/bin:/usr/sbin:/usr/bin
+Enviornment=NVM_BIN=/home/scheduler/.nvm/versions/node/v16.17.0/bin
+
+ExecStart=/home/scheduler/.nvm/versions/node/v16.17.0/bin/yarn start
+ExecStop=/bin/kill $(/sbin/lsof -t -i:3000)
+WorkingDirectory=/home/scheduler/stackarmor-scheduler/
+KillSignal=SIGQUIT
+TimeoutStopSec=5
+KillMode=process
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
